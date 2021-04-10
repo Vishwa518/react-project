@@ -5,29 +5,43 @@ import Main from "./Main";
 
 const HeaderSection = () => {
   return (
-    <div>
+    <div className="demo-big-content">
       <Layout fixedHeader>
-        <Header title={<strong>MY PORTFOLIO</strong>}>
+        <Header
+        style={{backgroundColor:'none'}}
+          className="header-color"
+          title={
+            <Link style={{ textDecoration: "none", color: "white" }} to="/">
+              MY PORTFOLIO
+            </Link>
+          }
+        >
           <Navigation>
+            <Link to="/">Home</Link>
             <Link to="/Resume">Resume</Link>
+            <Link to="/About">About</Link>
             <Link to="/Projects">Projects</Link>
             <Link to="/Contact">Contact</Link>
-            <Link to="/About">About</Link>
           </Navigation>
         </Header>
 
         <Drawer
-          title="Title"
-          style={{ alignItems: "flex-start", color: "lightcoral" }}
+          title={
+            <Link style={{ textDecoration: "none", color: "black" }} to="/">
+              MY PORTFOLIO
+            </Link>
+          }
+          style={{ color: "lightcoral" }}
         >
           <Navigation>
+            {/* <Link to="/">Home</Link> */}
             <Link to="/Resume">Resume</Link>
+            <Link to="/About">About</Link>
             <Link to="/Projects">Projects</Link>
             <Link to="/Contact">Contact</Link>
-            <Link to="/About">About</Link>
           </Navigation>
         </Drawer>
-
+        <div className="page-content" />
         <Main />
       </Layout>
     </div>
