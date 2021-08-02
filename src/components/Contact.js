@@ -13,10 +13,10 @@ function Contact() {
             style={{ height: "250px" }}
           />
           <p style={{ width: "75%", margin: "auto", paddingTop: "1em" }}>
-            React is an open-source, front end, JavaScript library for building
-            user interfaces or UI components. It is maintained by Facebook and a
-            community of individual developers and companies. React can be used
-            as a base in the development of single-page or mobile applications.
+            I am looking to work in a challenging environment and use my
+            technical skills in a suitably challenging role. I always look to
+            extend my knowledge and try to apply it practically with creativity
+            and innovation.
           </p>
         </Cell>
         <Cell col={6}>
@@ -29,7 +29,7 @@ function Contact() {
                   style={{ fontSize: "30px", fontFamily: "Anton" }}
                 >
                   <i class="fa fa-phone-square" aria-hidden="true" />
-                  1234567891
+                  7760392920
                 </ListItemContent>
               </ListItem>
               <ListItem>
@@ -37,15 +37,7 @@ function Contact() {
                   style={{ fontSize: "30px", fontFamily: "Anton" }}
                 >
                   <i class="fa fa-envelope" aria-hidden="true" />
-                  vishwa@gmail.com
-                </ListItemContent>
-              </ListItem>
-              <ListItem>
-                <ListItemContent
-                  style={{ fontSize: "30px", fontFamily: "Anton" }}
-                >
-                  <i class="fa fa-linkedin-square" aria-hidden="true" />
-                  linkedin
+                  vishwanathsomavarad@gmail.com
                 </ListItemContent>
               </ListItem>
             </List>
