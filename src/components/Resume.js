@@ -1,73 +1,99 @@
+import { makeStyles } from "@material-ui/core";
 import React from "react";
 import { Cell, Grid } from "react-mdl";
+import { constantText } from "../helpers";
 import EducationDetails from "./EducationDetails";
 import Experience from "./Experience";
 import Skills from "./Skills";
 
+const useStyles = makeStyles({
+  divContainer: {
+    textAlign: "center",
+  },
+  imageStyles: {
+    height: "200px",
+  },
+  textStyle: {
+    paddingTop: "2em",
+    color: "black",
+  },
+  subText: {
+    color: "gray",
+    fontFamily: "Josefin Sans",
+  },
+  hrLine: {
+    borderTop: "3px solid #833fb2",
+    width: "100%",
+  },
+  constantTextStyle: {
+    fontSize: 16,
+  },
+  headerText: {
+    fontSize: "3.2rem",
+    color: "white",
+    fontFamily: "Josefin Sans",
+  },
+  hrLine2: {
+    marginTop: "3px solid #e22947",
+  },
+});
 function Resume() {
+  const classes = useStyles();
   return (
     <div>
       <Grid>
         <Cell col={4}>
-          <div style={{ textAlign: "center" }}>
+          <div className={classes.divContainer}>
             <img
               src="https://www.shareicon.net/data/256x256/2016/01/25/708694_man_512x512.png"
               alt="avatar"
-              style={{ height: "200px" }}
+              className={classes.imageStyles}
             />
           </div>
-          <h2 style={{ paddingTop: "2em" }}>Vishwanath S</h2>
+          <h2 className={classes.textStyle}>{constantText.nameConstant}</h2>
 
-          <h4 style={{ color: "gray" }}>Full Stack Web developer</h4>
-          <hr style={{ borderTop: "3px solid #833fb2", width: "50%" }} />
-          <p>
-            MongoDB is a source-available cross-platform document-oriented
-            database program. Classified as a NoSQL database program, MongoDB
-            uses JSON-like documents with optional schemas. MongoDB is developed
-            by MongoDB Inc. and licensed under the Server Side Public License.
+          <h4 className={classes.subText}>{constantText.skillConstant}</h4>
+          <hr className={classes.hrLine} />
+          <h5 className={classes.subText}>{constantText.phone}</h5>
+          <p className={classes.constantTextStyle}>
+            {constantText.phoneNumber}
           </p>
-          <hr style={{ borderTop: "3px solid #833fb2", width: "50%" }} />
-          <h5>Address</h5>
-          <p>MongoDB is a source-available cross-platform</p>
-          <h5>Phone</h5>
-          <p>123456789</p>
-          <h5>Email</h5>
-          <p>vishwa@gmail.com</p>
-          <hr style={{ borderTop: "3px solid #833fb2", width: "50%" }} />
+          <h5 className={classes.subText}>{constantText.email}</h5>
+          <p className={classes.constantTextStyle}>{constantText.emailId}</p>
+          <h5 className={classes.subText}>{constantText.linkedin}</h5>
+          <p className={classes.constantTextStyle}>
+            {constantText.linkedinUrl}
+          </p>
         </Cell>
         <Cell className="resume-right-col" col={8}>
-          <h2>Education</h2>
+          <h2 className={classes.headerText}>{constantText.education}</h2>
           <EducationDetails
             startYear={2016}
             endYear={2020}
-            schoolName="SKSVMACET LXR"
-            schoolDescription="MongoDB is a source-available cross-platform document-oriented database program. 
-            Classified as a NoSQL database program."
+            schoolName={constantText.collageName}
+            schoolDescription={constantText.place}
           />
 
-          <EducationDetails
+          {/* <EducationDetails
             startYear={2014}
             endYear={2016}
-            schoolName="SKSVMACET LXR"
-            schoolDescription="MongoDB is a source-available cross-platform document-oriented database program. 
-            Classified as a NoSQL database program."
-          />
-          <hr style={{ marginTop: "3px solid #e22947" }} />
+            schoolName="PUC"
+            schoolDescription="PC JABIN PU SCIENCE COLLEGE HUBLI."
+          /> */}
+          <hr className={classes.hrLine2} />
 
-          <h2>Job Details</h2>
+          <h2 className={classes.headerText}>{constantText.jobDetails}</h2>
           <Experience
-            startYear={2020}
-            endYear={2022}
-            jobName="Software Engineer"
-            jobDescription="MongoDB is a source-available cross-platform document-oriented database program. 
-            Classified as a NoSQL database program."
+            jobName={constantText.comapanyName}
+            // jobDescription="Worked on responsible UI part design for both IOS and Android."
           />
-          <hr style={{ marginTop: "3px solid #e22947" }} />
-          <h2>Skills</h2>
-          <Skills skill="JavaScript" progressStatus={60} />
-          <Skills skill="React" progressStatus={60} />
+          <hr className={classes.hrLine2} />
+          <h2 className={classes.headerText}>{constantText.skills2}</h2>
           <Skills skill="React Native" progressStatus={70} />
-          <Skills skill="MongoDB" progressStatus={30} />
+          <Skills skill="React" progressStatus={65} />
+          <Skills skill="HTML/CSS" progressStatus={55} />
+          <Skills skill="JavaScript" progressStatus={50} />
+          <Skills skill="Firebase" progressStatus={30} />
         </Cell>
       </Grid>
     </div>

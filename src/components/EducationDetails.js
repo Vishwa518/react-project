@@ -9,12 +9,13 @@ function EducationDetails({
 }) {
   return (
     <Grid>
-      <Cell col={4}>
-        {startYear} - {endYear}
-      </Cell>
       <Cell col={8}>
         <h5 style={{ marginTop: "8px" }}>{schoolName}</h5>
         <p>{schoolDescription}</p>
+        <p>
+          {" "}
+          {startYear} - {endYear}
+        </p>
       </Cell>
     </Grid>
   );
