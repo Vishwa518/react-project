@@ -40,9 +40,13 @@ function Projects() {
             url={constantText.url2}
             title={"Image-gram"}
             button1={"GitHub"}
-            // button2={"CodePen"}
-            // button3={"Demo"}
             discription={constantText.url2Desc}
+          />
+          <ProjectDetailsCard
+            url={constantText.url3}
+            title={"Recipe-app"}
+            button1={"GitHub"}
+            discription={constantText.url3Desc}
           />
           {/* <ProjectDetailsCard
             url={`https://firebasestorage.googleapis.com/v0/b/image-gram-ce881.appspot.com/o/2021-06-27%20(3).png?alt=media&token=2051e8e2-ec80-4f43-bc38-6c19c3382e1e`}
