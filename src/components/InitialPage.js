@@ -2,6 +2,7 @@ import { makeStyles } from "@material-ui/core";
 import React from "react";
 import { Cell, Grid } from "react-mdl";
 import { constantText } from "../helpers";
+import profile from '../assets/Vishwa-photo.jpg';
 
 const useStyles = makeStyles({
   divContainer: {
@@ -17,7 +18,7 @@ function InitialPage() {
       <Grid className="landing-grid">
         <Cell col={12}>
           <img
-            src="https://www.shareicon.net/data/256x256/2016/01/25/708694_man_512x512.png"
+            src={profile}
             alt="avatar"
             className="avatar-img"
           />
