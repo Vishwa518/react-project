@@ -5,6 +5,7 @@ import { constantText } from "../helpers";
 import EducationDetails from "./EducationDetails";
 import Experience from "./Experience";
 import Skills from "./Skills";
+import profile from '../assets/Vishwa-photo.jpg';
 
 const useStyles = makeStyles({
   divContainer: {
@@ -45,7 +46,7 @@ function Resume() {
         <Cell col={4}>
           <div className={classes.divContainer}>
             <img
-              src="https://www.shareicon.net/data/256x256/2016/01/25/708694_man_512x512.png"
+              src={profile}
               alt="avatar"
               className={classes.imageStyles}
             />
@@ -66,13 +67,17 @@ function Resume() {
           </p>
         </Cell>
         <Cell className="resume-right-col" col={8}>
-          <h2 className={classes.headerText}>{constantText.education}</h2>
-          <EducationDetails
-            startYear={2016}
-            endYear={2020}
-            schoolName={constantText.collageName}
-            schoolDescription={constantText.place}
-          />
+          <h2 className={classes.headerText}>{constantText.jobDetails}</h2>
+            <Experience
+              jobName={constantText.comapanyName2}
+              joinDate={'Aug-2021 to Present'}
+              // jobDescription="Worked on responsible UI part design for both IOS and Android."
+            />
+            <Experience
+              jobName={constantText.comapanyName}
+              joinDate={'Dec-2020 to July-2021'}
+              // jobDescription="Worked on responsible UI part design for both IOS and Android."
+            />
 
           {/* <EducationDetails
             startYear={2014}
@@ -81,18 +86,19 @@ function Resume() {
             schoolDescription="PC JABIN PU SCIENCE COLLEGE HUBLI."
           /> */}
           <hr className={classes.hrLine2} />
-
-          <h2 className={classes.headerText}>{constantText.jobDetails}</h2>
-          <Experience
-            jobName={constantText.comapanyName}
-            // jobDescription="Worked on responsible UI part design for both IOS and Android."
+          <h2 className={classes.headerText}>{constantText.education}</h2>
+          <EducationDetails
+            startYear={2016}
+            endYear={2020}
+            schoolName={constantText.collageName}
+            schoolDescription={constantText.place}
           />
           <hr className={classes.hrLine2} />
           <h2 className={classes.headerText}>{constantText.skills2}</h2>
-          <Skills skill="React Native" progressStatus={70} />
+          <Skills skill="React Native" progressStatus={75} />
           <Skills skill="React" progressStatus={65} />
+          <Skills skill="JavaScript" progressStatus={70} />
           <Skills skill="HTML/CSS" progressStatus={55} />
-          <Skills skill="JavaScript" progressStatus={50} />
           <Skills skill="Firebase" progressStatus={30} />
         </Cell>
       </Grid>

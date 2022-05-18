@@ -1,7 +1,7 @@
 import React from "react";
 import { Cell, Grid } from "react-mdl";
 
-function Experience({ startYear, endYear, jobName, jobDescription }) {
+function Experience({ startYear, endYear, jobName, jobDescription, joinDate }) {
   return (
     <Grid>
       <Cell col={8}>
@@ -10,8 +10,7 @@ function Experience({ startYear, endYear, jobName, jobDescription }) {
         {/* <p>Implemented firebase push notification for both IOS and Android. </p>
         <p>Have a piece of knowledge in Trello and Jira .</p> */}
         <p>
-          {""}
-          Dec-2020 to July-2021
+          {joinDate}
         </p>
       </Cell>
     </Grid>
