@@ -8,7 +8,7 @@ const useStyles = makeStyles({
   divContainer: {
     width: "100%",
     margin: 0,
-    flex: 1,
+    flex: 1
   },
 });
 function InitialPage() {
