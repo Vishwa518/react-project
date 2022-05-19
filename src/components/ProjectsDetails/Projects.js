@@ -36,18 +36,18 @@ function Projects() {
             // button3={"Demo"}
             discription={constantText.url1Desc}
           />
-          <ProjectDetailsCard
+          {/* <ProjectDetailsCard
             url={constantText.url2}
             title={"Image-gram"}
             button1={"GitHub"}
             discription={constantText.url2Desc}
-          />
-          <ProjectDetailsCard
+          /> */}
+          {/* <ProjectDetailsCard
             url={constantText.url3}
             title={"Recipe-app"}
             button1={"GitHub"}
             discription={constantText.url3Desc}
-          />
+          /> */}
           {/* <ProjectDetailsCard
             url={`https://firebasestorage.googleapis.com/v0/b/image-gram-ce881.appspot.com/o/2021-06-27%20(3).png?alt=media&token=2051e8e2-ec80-4f43-bc38-6c19c3382e1e`}
             title={"Lavish"}
@@ -56,6 +56,23 @@ function Projects() {
             // button3={"Demo"}
             discription={`This one i built using react`}
           /> */}
+        </div>
+      );
+    } else if (activeTab === 1) {
+      return (
+        <div
+          className={
+            isMobileView ? classes.divContainer2 : classes.divContainer
+          }
+        >
+          <ProjectDetailsCard
+            url={constantText.url2}
+            title={"Instagram Clone"}
+            button1={"GitHub"}
+            // button2={"CodePen"}
+            // button3={"Demo"}
+            discription={constantText.url2Desc}
+          />
         </div>
       );
     }
@@ -103,7 +120,7 @@ function Projects() {
         ripple
       >
         <Tab>React</Tab>
-        {/* <Tab>React Native</Tab> */}
+        <Tab>React Native</Tab>
       </Tabs>
       <Grid>
         <Cell col={12}>
